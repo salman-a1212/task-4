@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,700;1,500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif !important;
+}
+
+.top-header {
+  font-size: 13px;
+}
+.grad {
+  background-image: linear-gradient(
+    to right,
+    rgb(235, 189, 65),
+    rgb(243, 81, 113),
+    rgb(154, 65, 204),
+    rgb(84, 115, 241),
+    rgb(71, 149, 252)
+  );
+}
+
+.dropdown-menu {
+  background-color: #160042 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #6721ff !important;
+}
+
+.hero-btn {
+  background: linear-gradient(
+    89.09deg,
+    #faec60 -4.93%,
+    #e5a34b 8.69%,
+    #ee6e4d 20.84%,
+    #f44380 37.75%,
+    #be3db3 52.82%,
+    #7746e6 73.27%,
+    #5a71f1 89.06%,
+    #439eff 101.36%
+  );
+  box-shadow: 3px 3px 0px #160042;
+  border: medium none;
+  border-radius: 30px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 19px 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 1;
+  margin: 0 10px;
+}
+
+.hero-btn:hover,
+.hero-btn-blue:hover {
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.hero-btn-blue {
+  background: #6721ff !important;
+  box-shadow: 3px 3px 0px #160042;
+}
+
+.salA-sec3-container,
+.salA-testimonils {
+  background-image: url("../assets/images/features_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  position: absolute !important;
+  right: 0 !important;
+  left: 0 !important;
+}
+
+.salA-comparison {
+  background-color: #f1f3fa !important;
+}
+
+.salA-comp-img1 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.salA-signup-btn {
+  background-color: #160042 !important;
+}
+
+.modal-content {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.modal-header {
+  /* padding: 10px 0 !important; */
+  border: 0 !important;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 830px !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Style the tab */
+.tab,
+.actor-tab {
+  overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button,
+.tab-links {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+  background: transparent;
+  color: #160042 !important;
+  border-bottom: 3px solid transparent;
+}
+
+.tab button.active {
+  border-bottom: 3px solid #160042;
+}
+
+/* Style the tab content */
+.tabcontent,
+.tab-content {
+  display: none;
+  padding: 6px 12px;
+}
+
+.tabcontent,
+.tab-content {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.price-card--price-number:before {
+  content: "$";
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.price-card--price-number:after {
+  content: "/ mo";
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.switch-label {
+  text-align: center;
+  opacity: 0.4;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.switch-label .save-money {
+  color: #474c56;
+  font-style: italic;
+  padding-left: 0.5rem;
+}
+
+.save-money--mobile {
+  color: #474c56;
+  font-style: italic;
+  display: none;
+}
+
+.switch-label.active {
+  opacity: 1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.15rem;
+  vertical-align: -50%;
+  margin: 0;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6721ff;
+  border-radius: 34px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#js-pricing-switch input:focus + .slider {
+  box-shadow: 0 0 1px #6721ff;
+}
+
+#js-pricing-switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media (max-width: 980px) {
+  /* Pricing Switch */
+
+  .switch-label {
+    display: inline-block;
+    width: auto;
+  }
+
+  .save-money {
+    display: none;
+  }
+
+  .save-money--mobile {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+.salA-pricing-table {
+  background-image: url("../assets/images/area_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.salA-price-btn {
+  background-color: #6721ff !important;
+}
+
+.select-option {
+  background-color: #f1f3fa !important;
+  box-shadow: 0 !important;
+  outline: 0 !important;
+  color: #474c56 !important;
+  font-size: 14px !important;
+}
+
+.bi-check-circle-fill,
+.bi-x-circle-fill {
+  color: #160042 !important;
+}
+
+.card-header h6,
+.card-header h1 {
+  color: #160042 !important;
+}
+
+.numbers .div h2 {
+  background: linear-gradient(
+    89.09deg,
+    #faec60 -4.93%,
+    #e5a34b 8.69%,
+    #ee6e4d 20.84%,
+    #f44380 37.75%,
+    #be3db3 52.82%,
+    #7746e6 73.27%,
+    #5a71f1 89.06%,
+    #439eff 101.36%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 15px;
+  line-height: 0.8;
+}
+
+.list-unstyled a,
+.text-content a {
+  color: #474c56 !important;
+}
+
+.num-title,
+.social-icons a,
+.footer-title,
+.nav-link,
+.comp-title {
+  color: #160042 !important;
+}
+
+.salA-hero-title {
+  color: #160042 !important;
+  font-size: 75px !important;
+}
+
+.salA-hero-title span,
+.salA-comparison-title span,
+.salA-training-title span,
+.testimonial-title span,
+.salA-actor-title span,
+.salA-recording-title span,
+.salA-pricing-title span {
+  font-family: "Playfair Display" !important;
+  font-style: italic;
+}
+
+.salA-hero-desc {
+  color: #474c56 !important;
+  font-size: 18px;
+}
+
+.salA-comparison-title,
+.salA-training-title,
+.testimonial-title,
+.salA-actor-title,
+.salA-recording-title,
+.salA-pricing-title {
+  font-size: 45px !important;
+  color: #160042 !important;
+}
+
+@media (max-width: 600px) {
+  .salA-hero-title {
+    font-size: 45px !important;
+  }
+}
+
+.features-list li {
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 2em;
+}
